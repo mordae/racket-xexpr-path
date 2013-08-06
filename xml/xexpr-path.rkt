@@ -76,8 +76,9 @@
 
 (define/contract (xexpr-path-list path xexpr)
                  (-> xexpr-path/c xexpr/c (listof (or/c xexpr/c string?)))
-  (let ((pipeline (add-between (map path-item-procedure path) append*)))
-    (append* ((apply compose (reverse pipeline)) (list xexpr)))))
+  (let ((pipeline (append* (for/list ((item (in-list path)))
+                             (list (path-item-procedure item) append*)))))
+    ((apply compose (reverse pipeline)) (list xexpr))))
 
 
 (define/contract (xexpr-path-first path xexpr)
