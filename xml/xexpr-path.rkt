@@ -4,6 +4,7 @@
 ;
 
 (require racket/contract
+         racket/string
          racket/match
          racket/dict
          racket/list
@@ -11,6 +12,7 @@
 
 (provide xexpr-path-first
          xexpr-path-list
+         xexpr-path-text
          xexpr-path/c)
 
 
@@ -86,6 +88,12 @@
   (let ((results (xexpr-path-list path xexpr)))
     (and (not (null? results))
          (first results))))
+
+
+(define/contract (xexpr-path-text path xexpr)
+                 (-> xexpr-path/c xexpr/c (or/c #f string?))
+  (let ((results (xexpr-path-list path xexpr)))
+    (string-append* (map xexpr->string results))))
 
 
 ; vim:set ts=2 sw=2 et:
