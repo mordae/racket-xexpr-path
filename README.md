@@ -3,7 +3,7 @@
 Example usage:
 
 ```racket
-(require xml/apathy)
+(require xml/xexpr-path)
 
 (define doc '(root
                (list-a
