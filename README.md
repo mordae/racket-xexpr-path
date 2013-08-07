@@ -1,4 +1,4 @@
-# XML Path
+# XML Expression Path Lookup
 
 Example usage:
 
