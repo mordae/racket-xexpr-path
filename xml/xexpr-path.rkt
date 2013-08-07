@@ -1,6 +1,6 @@
 #lang racket/base
 ;
-; XML-Expression Lookup Paths
+; XML-Expression Path Lookup
 ;
 
 (require racket/contract
