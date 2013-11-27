@@ -10,7 +10,7 @@
 @interaction-eval[#:eval xexpr-path-eval (require "xexpr-path.rkt")]
 
 
-@defmodule[xml/xexpr-path]
+@defmodule[xexpr-path]
 
 Utilities to find XML expression elements using a simple path.
 
