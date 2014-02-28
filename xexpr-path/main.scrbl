@@ -3,11 +3,11 @@
 @title{XML Expression Path Lookup}
 @author{@(author+email "Jan Dvorak" "mordae@anilinux.org")}
 
-@require[(for-label xml racket/base racket/contract "xexpr-path.rkt")]
+@require[(for-label xml racket/base racket/contract "main.rkt")]
 @require[scribble/eval]
 
 @(define xexpr-path-eval (make-base-eval))
-@interaction-eval[#:eval xexpr-path-eval (require "xexpr-path.rkt")]
+@interaction-eval[#:eval xexpr-path-eval (require "main.rkt")]
 
 
 @defmodule[xexpr-path]
